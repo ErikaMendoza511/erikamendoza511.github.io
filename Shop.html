@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop</title>
+  <link rel="stylesheet" href="./styleshop.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Kablammo&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="logo">Natural Essence</div>
+    <nav>
+      <a href="./index.html">Home</a>
+      <a href="./contac.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="slider" id="slider">
+        <div class="card">
+            <img src="./imagenes/7.jpg" alt="Producto 1"  height="370px">
+            <div class="card-content">
+                <h2 class="card-title">Producto 1</h2>
+                <p>Descripción breve del producto 1.</p>
+                <p class="card-price">$10.00</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="./imagenes/6.jpg" alt="Producto 2" width="10px" height="370px">
+            <div class="card-content">
+                <h2 class="card-title">Producto 2</h2>
+                <p>Descripción breve del producto 2.</p>
+                <p class="card-price">$15.00</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="./imagenes/11.jpg" alt="Producto 3" height="370px" >
+            <div class="card-content">
+                <h2 class="card-title">Producto 3</h2>
+                <p>Descripción breve del producto 3.</p>
+                <p class="card-price">$20.00</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="./imagenes/8.jpg" alt="Producto 4"height="370px">
+            <div class="card-content">
+                <h2 class="card-title">Producto 4</h2>
+                <p>Descripción breve del producto 4.</p>
+                <p class="card-price">$25.00</p>
+            </div>
+        </div>
+        <div class="card" >
+            <img src="./imagenes/12.jpg" alt="Producto 5"height="370px">
+            <div class="card-content">
+                <h2 class="card-title">Producto 4</h2>
+                <p>Descripción breve del producto 4.</p>
+                <p class="card-price">$25.00</p>
+            </div>
+        </div>
+    </div>
+  </main>
+
+  <script>
+    const slider = document.getElementById('slider');
+
+    slider.addEventListener('mousemove', (event) => {
+      const sliderWidth = slider.offsetWidth;
+      const mouseX = event.clientX - slider.getBoundingClientRect().left; // Posición del mouse dentro del slider
+      const scrollPosition = (mouseX / sliderWidth) * (slider.scrollWidth - sliderWidth);
+      slider.scrollLeft = scrollPosition; // Desplazar el slider
+    });
+  </script>
+</body>
+</html>
